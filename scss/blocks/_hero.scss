@@ -1,0 +1,156 @@
+.hero_container{
+    height: 650px;
+    margin-top: 125px;
+    background-image: url(../../img/scoter.png); 
+}
+
+
+
+
+
+.hero_div{
+    height: 650px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 50px;
+}
+    
+    .hero__title {
+        display: block;
+        align-items: center;
+        h1{
+        margin-left: 150px;
+        letter-spacing: 2.5px;
+        font-family: 'Space Mono';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 56px;
+        text-align: start;
+        color: #fff;
+        line-height: 56px;
+        margin-top: 10px;
+    }
+    div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        padding: 70px 0;
+        
+        hr{
+            width: 203px;
+            height: 10px;
+            background-color: #FCB72B;
+            border: #FCB72B;
+            // margin-top: 100px;
+        }
+        
+        p{
+            margin-left: 30px;
+            margin-top: 30px;
+            font-family: 'Lexend Deca';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 25px;
+            color: #FFFFFF;
+        }
+    }
+}
+
+.hero_btn{
+    @include btn;
+    margin-left: 250px;
+}
+
+.hero_vektor{
+    margin-top: 300px;
+}
+
+
+@media (min-width:577px) and (max-width:768px) {
+  
+    .hero_div{
+        display: block;
+        background-image:  url(../../img/vektor@2x.png),
+         url(../../img/scoter.png);
+        background-position: left -150px bottom , right -150px center;
+        background-size: 447px, 1440px;
+        background-repeat: no-repeat;
+        .hero__title{
+            text-align: center;
+            hr{
+                display: none;
+            }
+            h1{
+                text-align: center;
+                margin: 0 100px;
+                padding-top: 100px;
+            }
+            p{
+                text-align: center;
+                margin: 0 auto;
+            }
+            .hero_btn{
+                margin: 200px;
+            }
+        }
+    
+    }
+    .hero_vektor{
+        display: none;
+    }
+}
+
+
+@media(min-width:320px) and (max-width:576px){
+    .hero_container{
+
+        display: block;
+        background-image: url(../../img/scoter.png);
+        background-position: right  top;
+        background-repeat: no-repeat;
+        position: relative;
+        margin: 0 auto;
+        margin-top: 150px;
+        .hero_div{
+            display: block;
+            .hero__title{
+                display: block;
+                h1{
+                    text-align: center;
+                    margin: 0 auto;
+                    margin: 0px 90px;
+                    padding-top: 70px;
+                    br{
+                    display:none;
+                    }
+
+                }
+                div{
+                    hr{
+                        display: none;
+                    }
+                    p{
+                        text-align: center;
+                        margin: 0 auto;
+
+                    }
+                }
+                .hero_btn{
+                    margin: 0 auto;
+                    padding: 15px 45px;
+                    margin-left: 200px;
+                }
+
+
+            }
+            .hero_vektor{
+                margin: 0 auto;
+                position: absolute;
+                left: -50%;
+            }
+        }
+    }
+}

@@ -1,0 +1,15 @@
+@mixin btn {
+    padding: 8px 35px;
+    color: #fff;
+    background-color: transparent;
+    transition: all 0.5s ease-in;
+    border: 5px solid #FCB72B;
+    background-color: #FCB72B;
+    &:hover{
+        background-color: transparent;
+        color: #FCB72B;
+        padding: 8px 35px;
+        
+    }
+    content: "";
+}
